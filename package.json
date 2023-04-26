@@ -1,0 +1,34 @@
+{
+  "name": "api-to-do",
+  "version": "1.0.0",
+  "description": "Back-end application to build a to-do list.",
+  "main": "index.js",
+  "repository": "git@github.com:IgorEmerick/api-to-do.git",
+  "author": "Igor Emerick <igorbarbosaemerick@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@middy/core": "^4.3.1",
+    "@serverless/typescript": "^3.29.0",
+    "@types/aws-lambda": "^8.10.114",
+    "aws-lambda": "^1.0.7",
+    "esbuild": "^0.17.18",
+    "serverless": "^3.30.1",
+    "serverless-esbuild": "^1.43.1",
+    "serverless-offline": "^12.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.0.4"
+  }
+}
