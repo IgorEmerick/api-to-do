@@ -6,6 +6,9 @@
   "repository": "git@github.com:IgorEmerick/api-to-do.git",
   "author": "Igor Emerick <igorbarbosaemerick@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d src/shared/infra/typeorm/data_sources/DeveloperDataSource.ts"
+  },
   "dependencies": {
     "@middy/core": "^4.3.1",
     "@serverless/typescript": "^3.29.0",
@@ -13,9 +16,11 @@
     "aws-lambda": "^1.0.7",
     "dotenv": "^16.0.3",
     "esbuild": "^0.17.18",
+    "pg": "^8.10.0",
     "serverless": "^3.30.1",
     "serverless-esbuild": "^1.43.1",
-    "serverless-offline": "^12.0.4"
+    "serverless-offline": "^12.0.4",
+    "typeorm": "^0.3.15"
   },
   "devDependencies": {
     "@types/node": "^18.16.1",
