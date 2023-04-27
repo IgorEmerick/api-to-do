@@ -13,3 +13,5 @@ Back-end application to build a to-do list.
 - [ ] Password must contain lower case.
 - [ ] Password must contain number.
 - [ ] Password must contain special character.
+- [ ] Should receive only valid emails.
+- [ ] Should receive only valid names.
