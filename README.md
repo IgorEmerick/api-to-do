@@ -3,9 +3,18 @@ Back-end application to build a to-do list.
 
 # Features
 
+## Logs
+
+**Register logs**
+***
+
+- [ ] All requests must be registered into a database table.
+
 ## User
 
-*Create user:*
+**Create user:**
+***
+
 - [ ] Should create an user by name, email and password.
 - [ ] Should not create two or more users with same email.
 - [ ] Password must contain from 8 to 16 characters.
