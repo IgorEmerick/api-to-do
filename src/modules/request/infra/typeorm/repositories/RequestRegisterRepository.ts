@@ -1,7 +1,7 @@
-import { IRequestRegisterRepository } from '@modules/request/repositories/IRequestRegisterRepository';
 import { DataSource, Repository } from 'typeorm';
-import { ICreateRequestRegisterDTO } from '@modules/request/dtos/ICreateRequestRegisterDTO';
 import { RequestRegister } from '../entities/RequestRegister';
+import { ICreateRequestRegisterDTO } from '../../../dtos/ICreateRequestRegisterDTO';
+import { IRequestRegisterRepository } from '../../../repositories/IRequestRegisterRepository';
 
 export class RequestRegisterRepository implements IRequestRegisterRepository {
   private static repository: Repository<RequestRegister>;

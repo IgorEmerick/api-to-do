@@ -1,4 +1,3 @@
-import { RequestRegister } from '@modules/request/infra/typeorm/entities/RequestRegister';
 import {
   Column,
   CreateDateColumn,
@@ -7,6 +6,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import { RequestRegister } from '../../../../request/infra/typeorm/entities/RequestRegister';
 
 @Entity('users')
 export class User {

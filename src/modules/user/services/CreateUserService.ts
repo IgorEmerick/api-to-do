@@ -1,11 +1,11 @@
-import { AppError } from '@shared/errors/AppError';
-import { validateEmail } from '@shared/utils/validateEmail';
-import { validateName } from '@shared/utils/validateName';
-import { validatePassword } from '@shared/utils/validatePassword';
 import { ICreateUserDTO } from '../dtos/ICreateUserDTO';
 import { User } from '../infra/typeorm/entities/User';
 import { IUserRepository } from '../repositories/IUserRepository';
 import { IHashProvider } from '../providers/models/IHashProvider';
+import { validateEmail } from '../../../shared/utils/validateEmail';
+import { validateName } from '../../../shared/utils/validateName';
+import { validatePassword } from '../../../shared/utils/validatePassword';
+import { AppError } from '../../../shared/errors/AppError';
 
 export class CreateUserService {
   constructor(

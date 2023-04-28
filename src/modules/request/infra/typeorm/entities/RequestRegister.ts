@@ -1,4 +1,3 @@
-import { User } from '@modules/user/infra/typeorm/entities/User';
 import {
   Column,
   CreateDateColumn,
@@ -7,6 +6,7 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import { User } from '../../../../user/infra/typeorm/entities/User';
 
 @Entity('request_registers')
 export class RequestRegister {

@@ -1,6 +1,6 @@
-import { IMiddyRequestDTO } from '@shared/dtos/IMiddyRequestDTO';
-import { ensureDataSourceInitialization } from '@shared/utils/ensureDataSourceInitialization';
-import { RequestRegisterRepository } from '@modules/request/infra/typeorm/repositories/RequestRegisterRepository';
+import { RequestRegisterRepository } from '../../../modules/request/infra/typeorm/repositories/RequestRegisterRepository';
+import { IMiddyRequestDTO } from '../../dtos/IMiddyRequestDTO';
+import { ensureDataSourceInitialization } from '../../utils/ensureDataSourceInitialization';
 import { DeveloperDataSource } from '../typeorm/data_sources/DeveloperDataSource';
 
 export const registerResponseMiddleware = async ({
