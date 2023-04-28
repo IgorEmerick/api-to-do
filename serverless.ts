@@ -20,7 +20,13 @@ const serverlessConfiguration: AWS = {
       NODE_OPTIONS: '--enable-source-maps --stack-trace-limit=1000',
     },
   },
-  functions: {},
+  functions: {
+    // user
+    CreateUser: {
+      handler: './src/modules/user/handlers/CreateUserHandler.handle',
+      events: [{ http: { method: 'POST', path: '/user', cors: false } }],
+    },
+  },
   package: { individually: true },
   custom: {
     esbuild: {
