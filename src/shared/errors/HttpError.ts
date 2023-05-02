@@ -1,10 +1,10 @@
-export class AppError {
-  public readonly body: string;
-
+export class HttpError {
   public readonly statusCode: number;
 
+  public readonly body: string;
+
   constructor(status: number, message: string) {
-    this.body = JSON.stringify({ message });
     this.statusCode = status;
+    this.body = JSON.stringify({ message });
   }
 }

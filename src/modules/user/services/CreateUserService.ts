@@ -1,11 +1,16 @@
-import { ICreateUserDTO } from '../dtos/ICreateUserDTO';
-import { User } from '../infra/typeorm/entities/User';
+import { validateEmail } from 'src/shared/utils/validateEmail';
+import { validateName } from 'src/shared/utils/validateName';
+import { validatePassword } from 'src/shared/utils/validatePassword';
+import { HttpError } from 'src/shared/errors/HttpError';
+import { IHashProvider } from 'src/shared/providers/models/IHashProvider';
 import { IUserRepository } from '../repositories/IUserRepository';
-import { IHashProvider } from '../providers/models/IHashProvider';
-import { validateEmail } from '../../../shared/utils/validateEmail';
-import { validateName } from '../../../shared/utils/validateName';
-import { validatePassword } from '../../../shared/utils/validatePassword';
-import { AppError } from '../../../shared/errors/AppError';
+import { User } from '../infra/typeorm/entities/User';
+
+interface IRequest {
+  name: string;
+  email: string;
+  password: string;
+}
 
 export class CreateUserService {
   constructor(
@@ -13,27 +18,27 @@ export class CreateUserService {
     private hashProvider: IHashProvider,
   ) {}
 
-  async execute({ email, name, password }: ICreateUserDTO): Promise<User> {
+  async execute({ email, name, password }: IRequest): Promise<User> {
     if (
       !validateEmail(email) ||
       !validateName(name) ||
       !validatePassword(password)
     ) {
-      throw new AppError(400, 'Invalid params!');
+      throw new HttpError(400, 'Invalid params!');
     }
 
     const existUser = await this.userRepository.findByEmail(email);
 
     if (existUser) {
-      throw new AppError(400, 'Already exists an user with this email!');
+      throw new HttpError(400, 'User already exists!');
     }
 
-    const encryptedPassword = await this.hashProvider.encrypt(password);
+    const passwordCypher = await this.hashProvider.encrypt(password);
 
     return this.userRepository.create({
       email,
       name,
-      password: encryptedPassword,
+      password: passwordCypher,
     });
   }
 }

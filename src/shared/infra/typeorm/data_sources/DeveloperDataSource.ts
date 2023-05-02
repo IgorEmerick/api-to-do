@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import { config } from 'dotenv';
 import { DataSource } from 'typeorm';
 
@@ -12,7 +11,6 @@ export const DeveloperDataSource = new DataSource({
   password: process.env.DATABASE_PASSWORD,
   database: 'to-do',
   synchronize: false,
-  migrationsTableName: 'migration',
   entities: ['src/modules/**/infra/typeorm/entities/*.ts'],
   migrations: ['src/shared/infra/typeorm/migrations/*.ts'],
 });

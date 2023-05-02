@@ -16,11 +16,11 @@ Back-end application to build a to-do list.
 ***
 
 - [ ] Should create an user by name, email and password.
-- [ ] Should not create two or more users with same email.
-- [ ] Password must contain from 8 to 16 characters.
-- [ ] Password must contain upper case.
-- [ ] Password must contain lower case.
-- [ ] Password must contain number.
-- [ ] Password must contain special character.
-- [ ] Should receive only valid emails.
-- [ ] Should receive only valid names.
+- [x] Should not create two or more users with same email.
+- [x] Password must contain from 8 to 16 characters.
+- [x] Password must contain upper case.
+- [x] Password must contain lower case.
+- [x] Password must contain number.
+- [x] Password must contain special character.
+- [x] Should receive only valid emails.
+- [x] Should receive only valid names.

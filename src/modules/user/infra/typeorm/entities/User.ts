@@ -2,11 +2,9 @@ import {
   Column,
   CreateDateColumn,
   Entity,
-  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { RequestRegister } from '../../../../request/infra/typeorm/entities/RequestRegister';
 
 @Entity('users')
 export class User {
@@ -27,7 +25,4 @@ export class User {
 
   @Column({ type: 'varchar' })
   password: string;
-
-  @OneToMany(() => RequestRegister, request => request.user)
-  requests: RequestRegister[];
 }
