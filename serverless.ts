@@ -18,6 +18,11 @@ const serverlessConfiguration: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
       NODE_OPTIONS: '--enable-source-maps --stack-trace-limit=1000',
+      DATABASE_HOST: process.env.DATABASE_HOST,
+      DATABASE_PORT: process.env.DATABASE_PORT,
+      DATABASE_USER: process.env.DATABASE_USER,
+      DATABASE_PASSWORD: process.env.DATABASE_PASSWORD,
+      AUTHENTICATION_SECRET: process.env.AUTHENTICATION_SECRET,
     },
   },
   functions: {
@@ -25,6 +30,12 @@ const serverlessConfiguration: AWS = {
     CreateUser: {
       handler: './src/modules/user/handlers/CreateUserHandler.handle',
       events: [{ http: { method: 'POST', path: '/user', cors: false } }],
+    },
+    AuthenticateUser: {
+      handler: './src/modules/user/handlers/AuthenticateUserHandler.handle',
+      events: [
+        { http: { method: 'POST', path: '/user/authenticate', cors: false } },
+      ],
     },
   },
   package: { individually: true },
