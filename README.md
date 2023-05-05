@@ -10,6 +10,23 @@ Back-end application to build a to-do list.
 
 - [ ] All requests must be registered into a database table.
 
+## Project
+
+**Create project**
+***
+
+- [ ] Should be possible create a project.
+- [ ] Should be possible set members on creation by email.
+- [ ] Should be possible set admins on creation by email.
+- [ ] Must request authentication.
+- [ ] Must request a name.
+
+**List projects**
+***
+
+- [ ] Should be possible list projects.
+- [ ] Must request at least view permission to projects on list.
+
 ## User
 
 **Create user**
