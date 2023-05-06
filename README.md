@@ -15,11 +15,12 @@ Back-end application to build a to-do list.
 **Create project**
 ***
 
-- [ ] Should be possible create a project.
-- [ ] Should be possible set members on creation by email.
-- [ ] Should be possible set admins on creation by email.
-- [ ] Must request authentication.
-- [ ] Must request a name.
+- [x] Should be possible create a project.
+- [x] Should be possible set members on creation by email.
+- [ ] Should send an invite email to members not found.
+- [x] Should be possible set members permissions on creation.
+- [x] Must request authentication.
+- [x] Must request a name.
 
 **List projects**
 ***

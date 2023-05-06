@@ -1,3 +1,5 @@
+import { Project } from 'src/modules/project/infra/typeorm/entities/Project';
+import { ProjectMember } from 'src/modules/project/infra/typeorm/entities/ProjectMember';
 import { User } from 'src/modules/user/infra/typeorm/entities/User';
 import { DataSource } from 'typeorm';
 
@@ -9,5 +11,5 @@ export const AppDataSource = new DataSource({
   password: process.env.DATABASE_PASSWORD,
   database: 'to-do',
   synchronize: false,
-  entities: [User],
+  entities: [User, Project, ProjectMember],
 });
