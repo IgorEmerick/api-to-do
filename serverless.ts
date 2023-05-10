@@ -31,6 +31,10 @@ const serverlessConfiguration: AWS = {
       handler: './src/modules/project/handlers/CreateProjectHandler.handle',
       events: [{ http: { method: 'POST', path: '/project', cors: false } }],
     },
+    ListProject: {
+      handler: './src/modules/project/handlers/ListProjectHandler.handle',
+      events: [{ http: { method: 'GET', path: '/project', cors: false } }],
+    },
     // user
     CreateUser: {
       handler: './src/modules/user/handlers/CreateUserHandler.handle',

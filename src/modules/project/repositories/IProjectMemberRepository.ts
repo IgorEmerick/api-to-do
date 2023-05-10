@@ -5,4 +5,5 @@ export interface IProjectMemberRepository {
   createMany(
     project_members: ICreateProjectMemberDTO[],
   ): Promise<ProjectMember[]>;
+  findWithProjectByUserId(user_id: string): Promise<ProjectMember[]>;
 }

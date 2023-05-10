@@ -11,9 +11,15 @@ export const ensureAuthentication = async ({
 }: IMiddyRequestDTO): Promise<void> => {
   const { Authorization } = headers;
 
-  console.log(Authorization[0]);
+  if (!Authorization) {
+    throw new HttpError(401, 'Invalid authentication!');
+  }
 
   const [, token] = Authorization.split('Bearer ');
+
+  if (!token) {
+    throw new HttpError(401, 'Invalid authentication!');
+  }
 
   const tokenProvider = new JWTTokenProvider();
 
