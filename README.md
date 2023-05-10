@@ -22,12 +22,37 @@ Back-end application to build a to-do list.
 - [x] Must request authentication.
 - [x] Must request a name.
 
+**Get project**
+***
+
+- [ ] Should be possible get all project information (including status and tasks) by id.
+- [ ] Must request authentication.
+- [ ] Must request at least view permission.
+
 **List projects**
 ***
 
 - [x] Should be possible list projects.
 - [x] Must request authentication.
 - [x] Must request at least view permission to projects on list.
+
+## Status
+
+**Create status**
+***
+
+- [ ] Should be possible create a status into a project using status name and project id.
+- [ ] Must request authentication.
+- [ ] Must request admin permission on project.
+
+## Task
+
+**Create task**
+***
+
+- [ ] Should be possible create a task using task name, description and status id.
+- [ ] Must request authentication.
+- [ ] Must request edit permission.
 
 ## User
 
