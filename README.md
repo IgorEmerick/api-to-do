@@ -26,6 +26,7 @@ Back-end application to build a to-do list.
 ***
 
 - [ ] Should be possible list projects.
+- [ ] Must request authentication.
 - [ ] Must request at least view permission to projects on list.
 
 ## User
